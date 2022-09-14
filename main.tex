@@ -1,0 +1,73 @@
+\documentclass[a4paper,12pt,singlespacing]{article}
+\input{config.tex}
+
+% Utilizado para correções e comentários. Vá para 'util.tex' para saber mais.
+\include{util}
+
+% Aqui devem ser inseridas as informações sobre o trabalho
+    % Título:
+    \title{PROJECT DESIGN III: PJD 301B}
+    % Alunos e orientadores:
+    \author{DESIGN DOCUMENTATION}
+    % E-mails dos integrantes:
+    \def\emails{e-mail do aluno 1, e-mail do aluno 2, e-mail do aluno 3, e-mail do Orientador, e-mail do Coorientador}
+
+% Na pasta 'artigo' estão as respectivas seções que devem constar no trabalho. Lá deve ser inserido todo o conteúdo.
+
+% Para referências, consulte 'ref.bib' e saiba mais. Na seção de Referencial Teórico, são exemplificadas as formas de se fazer uma citação.
+
+\begin{document}
+    {\centering
+		\begin{figure}[!ht]
+			\centering
+			\includegraphics[scale=0.15]{./tut_logo.png}
+		\end{figure}
+
+        \setlength{\parskip}{0pt}
+		FACULTY OF INFORMATION \\ AND \\  COMMUNICATION TECHNOLOGY
+
+        \setlength{\parskip}{18pt}
+		NATIONAL DIPLOMA: COMPUTER SYSTEMS ENGINEERING
+
+        \setlength{\parskip}{18pt}
+        \textbf{ \thetitle }
+        \setlength{\parskip}{12pt}
+
+        \theauthor
+
+        \setlength{\parskip}{6pt}
+        % \footnotesize{\emails}
+
+    }
+
+
+    \clearpage  % Certification ended, now start a new page
+    \tableofcontents
+    \clearpage  % Certification ended, now start a new page
+
+
+    \justifying
+
+    % \input{artigo/0-resumo.tex}
+
+    \input{artictle/0-introduction.tex}
+
+    \input{artictle/2-systems-overview.tex}
+
+    \input{artictle/3-design-considerations.tex}
+
+    \input{artictle/4-assumptions-and-dependencies.tex}
+
+    \input{artictle/5-goals-and-guidelines.tex}
+
+    \input{artigo/6-modelagem.tex}
+
+    \input{artigo/7-sistema.tex}
+
+    \input{artigo/8-consideracoes.tex}
+
+    \section{Referências}
+
+    \raggedright
+    \printbibliography[heading=none]
+\end{document}

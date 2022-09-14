@@ -1,0 +1,7 @@
+*.aux
+*.bcf
+*.log
+*.out
+*.pdf
+*.xml
+*.xmpi

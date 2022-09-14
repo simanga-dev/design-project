@@ -1,0 +1,53 @@
+% Arquivo de configurações do modelo
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[lmargin=2cm, rmargin=2cm, tmargin=2.5cm, bmargin=2.5cm]{geometry}
+% \usepackage[brazil, brazilian]{babel}
+\usepackage[style=abnt]{biblatex}
+\usepackage{csquotes, graphicx, xcolor, comment, enumerate, multirow, multicol, titlesec, amsmath, amsthm, amsfonts, amssymb, dsfont, mathtools, blindtext, ragged2e, array, enumitem, tikz, bbding, pifont, wasysym, amssymb, hyperref, titling}
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{setspace}
+\setlength{\JustifyingParindent}{1.25cm}
+\setlength{\RaggedRightParindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{}
+\rhead{}
+\rfoot{\small\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\titlespacing*{\section}{0pt}{6pt}{0pt}
+\titlespacing*{\subsection}{0pt}{6pt}{0pt}
+\titlespacing*{\subsubsection}{0pt}{6pt}{0pt}
+
+\renewcommand{\thesection}{\arabic{section}.}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}.}
+\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.}
+
+\titleformat{\section}{\normalsize\bfseries}{\makebox[1.25cm][l]{\thesection}}{0pt}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\makebox[1.25cm][l]{\thesubsection}}{0pt}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\makebox[1.25cm][l]{\thesubsubsection}}{0pt}{}
+
+\usepackage{textcase}
+\usepackage[font=small, labelsep=endash, textfont=bf, labelfont=bf, aboveskip=6pt, belowskip=-6pt, tablename=TABELA, figurename=FIGURA]{caption}
+\usepackage[font=small, labelsep=endash, textfont=bf, labelfont=bf, aboveskip=6pt, belowskip=3pt, labelformat=simple]{subcaption}
+
+\renewcommand{\thetable}{\arabic{table}}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thesubfigure}{\arabic{subfigure}}
+\renewcommand{\thesubtable}{\arabic{subtable}}
+
+\addbibresource{ref.bib}
