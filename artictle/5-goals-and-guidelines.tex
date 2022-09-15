@@ -1,9 +1,17 @@
-\section{Goals and guidelines (1/2 page)}
+\subsection{Goals and guidelines}
+\subsection{Goals and guidelines}
 
-Describe any goals, guidelines, principles, or priorities which dominate or embody the design of the system's software. Such goals might be:
+The development of livestock tracking system follows the Unix philosophy that
+emphasis building simple, compact, clear, modular, and extensible code that can
+be easily maintain and repurposed by developer other than its creator
 
-    • The KISS principle ("Keep it simple stupid!")
-    • Emphasis on speed versus memory use
-    • Working, looking, or "feeling" like an existing product
+While developing the system, the main focus was power consumption, I wanted the
+system to consume less power as possible. A lot have been done on the Micro controller
+to make sure that the power consumption is low as possible, such as making sure that the bluetooth
+module is turned off, and only use the wife module, and lower than the CPU clock rate.
+I also made the CPU to do one job and one job only to make it last longer on a single
 
-For each such goal or guideline, unless it is implicitly obvious, describe the reason for its desirability. Feel free to state and describe each goal in its own sub-subsection if you wish.
+The design of the tracking hardware is design to be resisted to hash weather condition, to be
+robust. I made sure it does not fall easy when attached to the livestock. I also choose to make the
+box/ case to package the ESP32 black. This will make sure that is became invisible as possible to the
+livestock or not fool the livestock to think that is food

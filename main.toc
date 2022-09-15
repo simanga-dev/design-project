@@ -2,13 +2,23 @@
 \contentsline {subsubsection}{\numberline {0.1.1.}\textit {Scope}}{3}{subsubsection.0.1.1}%
 \contentsline {subsubsection}{\numberline {0.1.2.}\textit {Audience}}{3}{subsubsection.0.1.2}%
 \contentsline {subsection}{\numberline {0.2.}Systems overview}{3}{subsection.0.2}%
-\contentsline {section}{\numberline {1.}Design considerations (1/2 page)}{3}{section.1}%
-\contentsline {section}{\numberline {2.}Assumptions and dependencies (1/2 page)}{3}{section.2}%
-\contentsline {subsection}{\numberline {2.1.}Related software and hardware}{3}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2.}End-user characteristics}{3}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3.}General Constraints}{4}{subsection.2.3}%
-\contentsline {section}{\numberline {3.}Goals and guidelines (1/2 page)}{4}{section.3}%
-\contentsline {section}{\numberline {4.}Modelagem do Sistema}{4}{section.4}%
-\contentsline {section}{\numberline {5.}Sistema}{4}{section.5}%
-\contentsline {section}{\numberline {6.}Considerações Finais}{5}{section.6}%
-\contentsline {section}{\numberline {7.}Referências}{5}{section.7}%
+\contentsline {subsection}{\numberline {0.3.}Design considerations}{3}{subsection.0.3}%
+\contentsline {subsection}{\numberline {0.4.}Assumptions and dependencies}{4}{subsection.0.4}%
+\contentsline {subsubsection}{\numberline {0.4.1.}Related software and hardware}{4}{subsubsection.0.4.1}%
+\contentsline {subsubsection}{\numberline {0.4.2.}End-user characteristics}{4}{subsubsection.0.4.2}%
+\contentsline {subsection}{\numberline {0.5.}Goals and guidelines}{4}{subsection.0.5}%
+\contentsline {subsection}{\numberline {0.6.}Development Methods}{5}{subsection.0.6}%
+\contentsline {subsubsection}{\numberline {0.6.1.}\textit {Planning}}{5}{subsubsection.0.6.1}%
+\contentsline {subsubsection}{\numberline {0.6.2.}\textit {Creating}}{5}{subsubsection.0.6.2}%
+\contentsline {subsubsection}{\numberline {0.6.3.}\textit {Developing}}{5}{subsubsection.0.6.3}%
+\contentsline {subsubsection}{\numberline {0.6.4.}\textit {Deployment}}{5}{subsubsection.0.6.4}%
+\contentsline {subsection}{\numberline {0.7.}Architectural Strategies}{5}{subsection.0.7}%
+\contentsline {subsubsection}{\numberline {0.7.1.}\textit {Tehchnologies used}}{5}{subsubsection.0.7.1}%
+\contentsline {subsubsection}{\numberline {0.7.2.}\textit {Communication mechanisms used}}{6}{subsubsection.0.7.2}%
+\contentsline {subsection}{\numberline {0.8.}Subsystem Architecture}{6}{subsection.0.8}%
+\contentsline {subsubsection}{\numberline {0.8.1.}\textit {ESP32(hardware)}}{6}{subsubsection.0.8.1}%
+\contentsline {subsubsection}{\numberline {0.8.2.}\textit {Node Js (Server Application)}}{7}{subsubsection.0.8.2}%
+\contentsline {subsubsection}{\numberline {0.8.3.}\textit {Web Application (Client dashborad)}}{7}{subsubsection.0.8.3}%
+\contentsline {subsection}{\numberline {0.9.}Functional Flow}{7}{subsection.0.9}%
+\contentsline {subsection}{\numberline {0.10.}Glossary}{7}{subsection.0.10}%
+\contentsline {subsection}{\numberline {0.11.}Bibliography}{7}{subsection.0.11}%

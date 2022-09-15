@@ -32,32 +32,59 @@ to resist hard weather condition
 
 ### Design considerations
 
-T
+The first issue that need to be solved on the design consideration is the power
+supply for the Micro controller. We need to make sure that the battery last
+longer and became rechargeable over the life span of the livestock
+
+The second is weather condition, The device need to withstand harsh weather
+condition since livestock can be farmed outside
+
+The third design issue is the wight of the device, We need the device to be light as possible that it
+does not affect the growth of the livestock.
 
 ### Assumption and dependencies
 
+The livestock monitoring system is developed with the assumption its users
+have access to a web browser. Weather that be a phone or computer, few of the
+popular web browser include Chrome, Firefox and Brave. This is by design, A web
+browser is cross-platform by default, that mean weather you are using a
+Windows, Mac or Linux you can still access the system.
 
-### Assumption and dependencies
-The system need a web browser to connect to the dashborad. This is by design. A web browser is cross plarform
-by default. that mean weather you are using Windoes, Mac or Linux you can still access the apllication system
-
-The system assume you know how to connect to the internet. and you know how to use the internet
+We also developed the system under the assumption that where the livestock
+is being kept the is internet connection, or at least we can install one. The
+Micro controller need internet access to be able to send data that we need to
+monitor the livestock and for the most part we assume that our users know how
+to access the internet and can be able to read chart
 
 #### Relatable software
 
-The system is related in most way to a car tracking system, The difference us a
-car does not need a solar power since it can get power from the car while when
-the livestock you have to supplier solar panel
+The system is related in most way to a car tracking system, The difference is a
+car does not need a solar power since it can get power from the car while
+the livestock monitoring system  you need creative way to supplier power to the
+system
+
+#### Related software and hardware
+
+The system is related in most way to a car tracking system, The difference is a
+car does not need a solar power since it can get power from the car while
+the livestock monitoring system  you need creative way to supplier power to the
+system
 
 
-*Describe any global limitations or constraints that have a significant impact
+#### General Constraints
+
+Describe any global limitations or constraints that have a significant impact
 on the design of the system's software (and describe the associated impact).
 Such constraints may be imposed by any of the following (the list is not
 exhaustive):
+
 - Hardware or software environment
 - End-user environment
 - Availability or volatility of resources
 - Other requirements described in the requirements specification
+
+
+
 
 ### Goals and guidelines
 The development of livestock tracking system follows the Unix philosophy that
@@ -65,12 +92,10 @@ emphasis building simple, compact, clear, modular, and extensible code that can
 be easily maintain and repurposed by developer other than its creator
 
 While developing the system, the main focus was power consumption, I wanted the
-system to consume less power as possible, especially on the ESP32. A lot have been done
-to make sure that the power consumption is low such as making sure that the bluethroat
+system to consume less power as possible. A lot have been done on the Micro controller
+to make sure that the power consumption is low as possible, such as making sure that the bluetooth
 module is turned off, and only use the wife module, and lower than the CPU clock rate.
 I also made the CPU to do one job and one job only to make it last longer on a single
-battery charge
-
 The design of the tracking hardware is design to be resisted to hash weather condition, to be
 robust. I made sure it does not fall easy when attached to the livestock. I also choose to make the
 box/ case to package the ESP32 black. This will make sure that is became invisible as possible to the
@@ -79,29 +104,30 @@ livestock or not fool the livestock to think that is food
 
 ### Development Methods
 
-The development of the project is develope using two wellknow developmne mthods in the
-software indusry, which is **Agile development methodology** and **DevOps deployment methodology**
-Those mothods was adapted after the first Software Development Life Cycle was applied.
-The first step. Agile development methodlogy was used because it focuse strongly on user experience
-and input. This make the softwarre highl responsive to changes while developing the softeware and also
-get the system up and fuctional quickly to meet the user needs. DevOps deployment methodlogy was to make
+The development of the project is developed using two well known development methods in the
+software industry, which is **Agile development methodology** and **DevOps deployment methodology**
+Those methods was adapted after the first Software Development Life Cycle was applied.
+The first step. Agile development methodology was used because it focus strongly on user experience
+and input. This make the software high responsive to changes while developing the software and also
+get the system up and factional quickly to meet the user needs. DevOps deployment methodology was to make
 sure that I get the application up and running quick, using things such as continues deliverance, git,
-github.
+Github.
 
 #### Planning
+
 The first step on the development of the livestock monitoring system was to draft steps and
 calculating labor cost and material costs, creating timetable with target goals and creating a
 structure that can be followed when developing the system
 
 #### Creating
-On this stage I focus more on packages the ESP32 to the case, connect the ESP to the wifi,
-carefully soldering the sysrtem componets on the veroboard, esureing neat circuit is buit and ther are
-no short circut that may cause blowing of the components
+On this stage I focus more on packing the ESP32 to the case, connect the ESP to the WI-FI,
+carefully soldering the system components on the veroboard, ensuring neat circuit is built and the are
+no short circuit that may cause blowing of the components
 
 #### Developing
-At this stage is where I swithch to following Agile development methodoloy, since it is
+At this stage is where I switch to following Agile development methodology, since it is
 a software problems. I developed a NodeJS sever using JavaScript and a framework called
-Node JS.
+Express.
 
 #### Deployment
 I use git to deploy the application to the cloud. push the changes to git so that the system
@@ -109,123 +135,57 @@ can get the changes when made to the master branch. Tested the changes if the me
 needs that I define or proposed
 
 #### Architectural Strategies
-The hardware is pcackage on a black case of about 50CM to 20cm and 10cm hight. The case
-for the hardware is light in weight and most of the livestock such as cattle and cow, sheep wont
-fellt the case weight. The decision I don;t want to strain wight of the livestock that it
-will affect their growth
 
-On the drawing board, I wanted a flexible solar pane to use it as belt, that will
-serve to purpose, Charge the battery inside the case and also hold the case in place.
-dute to avaialbility I only able to find a hard solar panel that can charge up to 6V.
-This will affect the design, The finel pacakge, The case and all wont look nice but it will
-be enought to do a demostraction
+The hardware is packaged on a black case of about 50cm to 20cm and 10cm hight. The case
+for the hardware is light in weight and most of the livestock such as cattle and cow, sheep would not
+feel the case weight. The decision I do not want to strain wight of the livestock that it end up
+affect their growth
+
+On the drawing board, I wanted a flexible solar pane to be used  as belt, that will
+serve two purposes, Charge the battery inside the case and also hold the case in place
+due to availability I only able to find a hard solar panel that can charge up to 6V.
+This will affect the design, The final package, The case and all would look nice, but it will
+be good enough to do a demonstration
 
 ##### *Tehchnologies used*
 
-The hardware, ESP32 bing specif is programmed using the C++ nad curl libray was used theat allow
-the ESP32 to communicate with the server over the internet. C++ is the starndard programming language when
-it come to developing low level system, It can integrate very well with hardware. It made sense to
-use C++ although is not the only language since we have language such as C# and Rust
-C++ turnes out to even have more advantage since we also want to consume less power and it can be
-optimise to maximsie the speed of the CPU. Curl, is a open source libray used in most C++ code base when
-need to connect to the internet it is also light witht, it does not consume to much power
+The hardware, ESP32 Micro controller it is programmed using the C++ programming
+language and the curl library was used to allow the ESP32 to communicate with
+the server over the internet. C++ is the standard programming language when it
+come to programming low level system, It can integrate very well with hardware.
+Made sense to use C++ although is not the only language since we have
+language such as C# and Rust. C++ turned out to even have more advantage since
+we also want to consume less power and it can be optimize to maximise the speed
+of the CPU. Curl, is a open source library used in most C++ code base when need
+to connect to the internet it is also light libra, it does not consume too much
+power
 
-The server, is developed with the Javascrip programming langaude using a framewrok called Express.
-running on a node server(the application). JavaSCrip it has replace PHP when you want to create a qick
-server. It has most security feature and the is available resources online for librayies for
-absolute anything you might want to do. The server is hosted on linode, a cloud base company that
-offer most clound services. This is to make sure you can connect to sever from anywhre
-arround the world
+The server, is developed with the JavaScript programming language using a
+framework called Express. Running on a node server(the application). JavaScript
+it has replaced PHP when you want to create a quick server. It has most security
+feature and the is more resources online for libraries for absolute
+anything you might want to do. The server is hosted on Linode, a cloud base
+company that offer most cloud services. This is to make sure you can connect
+to sever from anywhere around the world
 
-future plan for the application is to collect more data from the livestock such as temperature,
-location and display the infomation in to the dashborad. Research on maximazing power efficient so that
-the system can last longer on a single charge if the solar pannel can not charge the battery in a
+Future plan for the application is to collect more data from the livestock such as temperature,
+location and display the information in to the dashboard. Research on maximizing power efficient so that
+the system can last longer on a single charge if the solar panel can not charge the battery in a
 rainy weather.
 
-
-The user interact with the system via a beb browser. If they know how to user a web browser
+The user interact with the system via a web browser. If they know how to user a web browser
 They will know how to use the system. The input to the system is the signal sent from the case
 to the server and the output will be the dashboard where we display the information about
 the livestock
 
-Describe any design decisions and/or strategies that affect the overall
-organization of the system and its higher-level structures. These strategies
-should provide insight into the key abstractions and mechanisms used in the
-system architecture. Describe the reasoning employed for each decision and/or
-strategy (possibly referring to previously stated design goals and principles)
-and how any design goals or priorities were balanced or traded-off. Such
-decisions might concern (but are not limited to) things like the following:
-
-
 ##### *Communication mechanisms*
 The following diagrame display communication flow of the ESP32 and the server
 ```
-digram
+<digram>
 ```
 
-
-- Use of a particular type of product (programming language, database, library, etc. ...)
-- Reuse of existing software components to implement various parts/features of the system
-- Future plans for extending or enhancing the software
-- User interface paradigms (or system input and output models)
-- Hardware and/or software interface paradigms
-- Error detection and recovery
-- Memory management policies
-- External databases and/or data storage management and persistence
-- Distributed data or control over a network
-- Generalized approaches to control
-- Concurrency and synchronization
-- Mijanagement of other resources
-
-Each significant strategy employed should probably be discussed in its own
-subsection, or (if it is complex enough) in a separate design document (with an
-appropriate reference here of course). Make sure that when describing a design
-decision that you also discuss any other significant alternatives that were
-considered, and your reasons for rejecting them (as well as your reasons for
-accepting the alternative you finally chose). Sometimes it will be most
-effective to employ the "pattern format" for describing a strategy.
-
-#### System Architecture(1page)
-This section should provide a high-level overview of how the functionality and
-responsibilities of the system were partitioned and then assigned to subsystems
-or components. Don't go into too much detail about the individual components
-themselves (there is a subsequent section for detailed component descriptions).
-The main purpose here is to gain a general understanding of how and why the
-system was decomposed, and how the individual parts work together to provide
-the desired functionality.
-
-At the top-most level, describe the major responsibilities that the software
-must undertake and the various roles that the system (or portions of the
-system) must play. Describe how the system was broken down into its
-components/subsystems (identifying each top-level component/subsystem and the
-roles/responsibilities assigned to it). Describe how the higher-level
-components collaborate with each other in order to achieve the required
-results. Don't forget to provide some sort of rationale for choosing this
-particular decomposition of the system (perhaps discussing other proposed
-decompositions and why they were rejected). Feel free to make use of design
-patterns, either in describing parts of the architecture (in pattern format),
-or for referring to elements of the architecture that employ them.
-
-If there are any diagrams, models, flowcharts, documented scenarios or
-use-cases of the system behavior and/or structure, they may be included here
-(unless you feel they are complex enough to merit being placed in the Detailed
-System Design section). Diagrams that describe a particular component or
-subsystem should be included within the particular subsection that describes
-that component or subsystem.
-
-Note:
-
- This section (and its subsections) really applies only to newly developed (or
- yet-to-be developed) portions of the system. If there are parts of the system
- that already existed before this development effort began, then you only need
- to describe the pre-existing parts that the new parts of the system depend
- upon, and only in enough detail sufficient to describe the relationships and
- interactions between the old parts and the new parts. Pre-existing parts that
- are modified or enhanced need to be described only to the extent that is
- necessary for the reader to gain a sufficient understanding of the nature of
- the changes that were made.
-
 #### Subsystem Architecture
+
 The system does not contain complicated componentes, everything is simple as it
 archieve a specific things. This is by design, Thanks to the Unix philosophy. The
 whole purpose of the system is to count livestock remotely
@@ -247,28 +207,6 @@ When a client is connected to that socket, the total number its get send to the 
 The Web applicaton connect to the server using web socket to listen to the datat bieng screaed from
 the server which represent the number of unique ID from the databas
 
-
-If a particular component is one which merits a more detailed discussion than
-what was presented in the System Architecture section, provide that more
-detailed discussion in a subsection of the System Architecture section (or it
-may even be more appropriate to describe the component in its own design
-document). If necessary, describe how the component was further divided into
-subcomponents, and the relationships and interactions between the subcomponents
-(similar to what was done for top-level components in the System Architecture
-section).
-
-If any subcomponents are also deemed to merit further discussion, then describe
-them in a separate subsection of this section (and in a similar fashion).
-Proceed to go into as many levels/subsections of discussion as needed in order
-for the reader to gain a high-level understanding of the entire system or
-subsystem (but remember to leave the gory details for the Detailed System
-Design section).
-
-If this component is very large and/or complex, you may want to consider
-documenting its design in a separate document and simply including a reference
-to it in this section. If this is the option you choose, the design document
-for this component should have an organizational format that is very similar
-(if not identical to) this document.
 
 ### Detailed System Design
 
@@ -308,30 +246,8 @@ this component
 
 #### Resources
 
-A description of any and all resources that are managed, affected, or needed by
-this entity. Resources are entities external to the design such as memory,
-processors, printers, databases, or a software library. This should include a
-discussion of any possible race conditions and/or deadlock situations, and how
-they might be resolved.
-
-#### Processing
-
-A description of precisely how this components goes about performing the duties
-necessary to fulfill its responsibilities. This should encompass a description
-of any algorithms used; changes of state; relevant time or space complexity;
-concurrency; methods of creation, initialization, and cleanup; and handling of
-exceptional conditions.
 
 #### Interface/Exports
-
-The set of services (resources, data, types, constants, subroutines, and
-exceptions) that are provided by this component. The precise definition or
-declaration of each such element should be present, along with comments or
-annotations describing the meanings of values, parameters, etc. .... For each
-service element described, include (or provide a reference) in its discussion a
-description of its important software component attributes (Classification,
-Definition, Responsibilities, Constraints, Composition, Uses, Resources,
-Processing, and Interface).
 
 Much of the information that appears in this section is not necessarily
 expected to be kept separate from the source code. In fact, much of the
